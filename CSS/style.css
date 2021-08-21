@@ -1,0 +1,539 @@
+
+*{
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: lighter;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #af05c9;
+    padding: 0px 16px;
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    z-index: 100;
+
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.navbar-brand label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+
+}
+.navbar-brand h3{
+    padding: 0px 30px 0px 0px;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu ul li{
+    list-style: none;
+    float: left;
+}
+.navbar-menu ul li a{
+    
+    text-decoration: none;
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    font-size: 10px;
+    color: #fff;
+}
+@media only screen and ( max-width: 900px ) {
+    .navbar-menu ul li a {
+        display: none;
+    }
+    .my-app {
+        margin-left: -55px;
+    }
+    #toggle:checked ~ .my-app {
+        margin-left: 0px;
+        width: 256px;
+    }
+    .main-content {
+        margin-left: -55px;
+    }
+
+}
+
+
+
+
+.user-wrapper{
+    padding-right: 60px;
+    display: flex;
+    align-items: center;   
+}
+@media only screen and ( max-width: 440px ){
+    div.user-wrapper{
+        display: none;
+    }
+
+}
+.user-wrapper ul li{
+    padding-left: 15px;
+    list-style: none;
+    float:left;
+}
+.user-wrapper ul li a{
+    text-decoration: none;
+    display: flex;
+    font-size: 13px;
+    color: #fff;
+}
+
+.my-app {
+    z-index: 1000;
+    display: flex;
+    margin-top: 4rem;
+    position: fixed;
+    width: 55px;
+    height:100%;
+    background-image: linear-gradient(rgba(253, 15, 241, 0.281), rgba(255, 255, 255, 0)), url(/img/g.jpeg);
+    background-size: cover;
+    background-position: center;
+    overflow-x:hidden;
+    transition: .5s;
+}
+@media only screen and ( max-height: 550px){
+    div.my-app{
+        height: 88%;
+    }
+}
+@media only screen and ( max-height: 415px){
+    div.my-app{
+        height: 85%;
+    }
+}
+@media only screen and ( max-height: 380px){
+    div.my-app{
+        height: 83%;
+    }
+}
+@media only screen and ( max-height: 321px){
+    div.my-app{
+        height: 81%;
+    }
+}
+@media only screen and ( max-height: 285px){
+    div.my-app{
+        height: 77%;
+    }
+}
+.my-app ul {
+    height: 200px;
+    padding-left: 0px;
+}
+.my-app ul li{
+
+    width: 100%;
+    transition: .4s;
+}
+.my-app ul li:hover  {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.514);
+}
+.my-app ul li a{
+    
+    margin-left: 17px;
+    line-height: 40px;
+}
+
+.my-app ul li a .icon{
+    
+    padding-right: 20px;
+    font-size: 17px;
+    color: #f50290;
+}
+.my-app ul li a .title{
+    display: none;
+    font-size: 17px;
+    color: #f50290;
+    white-space: nowrap;
+}
+.my-app ul hr{
+    width: 256px;
+    border-width: 1px;
+    opacity: 25%;
+}
+.my-app ul p {
+    display: none;
+    padding-left: 10px;
+    line-height: 0px;
+    color: rgb(141, 141, 141);
+    font-size: 15px;
+}
+
+#toggle {
+    display: none;
+}
+#toggle:checked ~ .my-app {
+    width: 256px;
+}
+#toggle:checked ~ .my-app ul p {
+    display: flex;
+}
+#toggle:checked ~ .my-app ul li:hover{
+    padding-left: 10px;
+}
+#toggle:checked ~ .my-app ul li a .title{
+    display:contents;
+}
+
+.main-content {
+    margin-top: 4rem;
+    padding-left: 0px;
+    margin-right: -8px;
+    min-height: 100%;
+    background: #f0f0f0;
+    transition: .5s;
+}
+@media only screen and ( min-width: 1200px){
+    #toggle:checked ~ .main-content{
+        padding-left: 201px;
+    }
+}
+@media only screen and (max-width:281px){
+    div.main-content{
+        padding-right: 68px;
+    }
+
+}
+@media only screen and (max-width:321px){
+    div.main-content{
+        width:140%;
+    }
+}
+@media only screen and (max-width:361px){
+    div.main-content{
+        width:130%;
+    }
+}
+.main-content header {
+
+    height: 60px;
+    font-size: 15px;
+    background-color: white;
+    line-height: 60px;
+    padding-left: 30px;
+}
+.main-content header a{
+    display: contents;
+    color: #0d8a4b;
+}
+.main-content header p{
+    display: contents;
+    color: #000000;
+}
+.cards-1 {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 20px;
+    margin: 30px 20px ;
+}
+@media only screen and ( max-width: 1200px) and ( min-width: 900px ){
+    div.cards-1 {
+        grid-template-columns: repeat( 2, 1fr);
+    }
+}
+@media only screen and ( max-width: 900px){
+    div.cards-1 {
+        grid-template-columns: repeat(1 ,1fr);
+    }
+}
+.cards-1 .card-header {
+    
+    padding: 45px 30px ;
+    line-height: 100px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin:0px 10px;  
+   position: relative; 
+}
+.cards-1 .card-content {
+    margin-top: -180PX;
+    padding-top: 180px ;
+    border-radius: 10px;
+    background: white;
+}
+.cards-1 .card-content h4  {
+    margin-left: 15px;
+    margin-bottom: -5px;
+    font-size: 17px;
+}
+.cards-1 .card-content p  {
+    margin-left: 15px;
+    font-size: 16px;
+    color: gray;
+
+}
+.cards-1 .card-content p  i {
+    color:#0d8a4b;
+}
+
+.cards-1 .card-content hr {
+    margin: 0px 20px;
+    border-width: 1px;
+    opacity: 25%;
+}
+
+.cards-1 .card-content .footder-content {
+    display: block;
+    padding: 0px 10px 15px 5px;
+    color: gray;
+    font-size: 15px;
+}
+.cards-1 .card-content .footder-content i{
+    color: gray;
+    padding-right: 10px;
+}
+.cards-2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 30px 20px ;
+    
+}
+
+@media only screen and ( max-width: 900px ) and (min-width:440px){
+    div.cards-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:1120px) and (min-width: 900px){
+    div.cards-2 {
+        grid-template-columns: repeat(3, 1fr);
+    }   
+}
+@media only screen and (max-width: 440px){
+    div.cards-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.cards-2 .card-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cards-2 .card-header i{
+    padding: 40px;
+    margin-left: 10px;
+    font-size: 30px;
+    color: white;
+    border-radius: 10px;
+}
+.cards-2 .card-header .card-content{
+    padding-right: 15px;
+    text-align: right;
+}
+.cards-2 .card-header .card-content h4{
+    color: gray;
+}
+.cards-2 .footder-content {
+    margin-top: -100px;
+    padding-top: 100px;
+    color: gray;
+    background: white;
+    border-radius: 10px;
+}
+.cards-2 .footder-content hr{
+    border-width: 1px;
+    opacity: 25%;
+    margin: 20px 20px;
+}
+.cards-2 .footder-content p{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+}
+
+.cards-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0px 20px;
+    
+}
+@media only screen and (max-width:700px){
+    div.cards-3{
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 20px;
+    }
+}
+
+.cards-3 .card-1 .card-header {
+    display: grid;
+    padding-left: 30px;
+    border-radius: 10px;
+    position: relative;
+    margin: 0px 10px 0px 10px;
+}
+
+.cards-3 .card-1 .card-header h4{
+    margin-bottom: 0px;
+    color: #fff
+}
+.cards-3 .card-1 .card-header p{
+    color: #fff;
+    opacity: 70%;
+}
+
+.cards-3 .card-1 .card-content{
+    background: white;
+    border-radius: 10px;
+    padding-top: 95px ;
+    margin-top: -70px;
+    color: rgb(90, 90, 90);
+    text-align: left;
+}
+
+.cards-3 .card-1 .card-content table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cards-3 .card-1 .card-content td, th{
+    width: 90px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.37);
+}
+
+.cards-3 .card-1 .card-content th{
+    color: rgb(0, 0, 0);
+    padding: 0px 10px;
+}
+.cards-3 .card-1 .card-content td{
+    padding: 0px 10px;
+}
+.cards-3 .card-1 .card-content tbody:hover{
+    background: rgba(170, 169, 169, 0.267);
+}
+
+.cards-3 .card-1 .card-content .card-footder {
+    display: flex;
+    justify-content: flex-end;
+    
+    color: rgba(128, 128, 128, 0.767);
+}
+.cards-3 .card-1 .card-content .card-footder  select{
+    margin-right:20px;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+.cards-3 .card-1 .card-content .card-footder  p{
+    margin-right: 20px;
+}
+.cards-3 .card-1 .card-content .card-footder  button{
+   border-color: rgba(255, 255, 255, 0.438);
+   border-radius: 10px;
+   padding: 0px 10px;
+   margin-top: 10px;
+   background: white;
+}
+
+.cards-3 .card-2 .card-header  {
+    display: flex;
+    border-radius: 10px;
+    margin: 0px 10px;
+    justify-content: space-evenly;
+    position: relative;
+    color: white
+}
+.cards-3 .card-2 .card-header .click{
+
+    display: table;
+    padding: 0px 8px;
+    opacity: 50%;
+    transition: .3s;
+    
+}
+.cards-3 .card-2 .card-header .click:hover{
+    border-bottom: 3px solid white;
+    background: rgba(255, 255, 255, 0.205);
+    opacity: 100%;
+
+}
+.cards-3 .card-2 .card-header .click:active{
+    color: rgb(0, 255, 55);
+}
+.cards-3 .card-2  .card-header i{
+
+    margin-top: 20px;
+    padding-right: 10px;
+    justify-content: space-evenly;
+}
+
+.cards-3 .card-2 .card-content {
+    background: white;
+    margin-top: -40px;
+    border-radius: 10px;
+    padding: 60px 20px 30px 10px;
+    color: rgb(90, 90, 90);
+    text-align: left;
+}
+.cards-3 .card-2 .card-content .pane {
+    display:none;
+}
+.cards-3 .card-2 .card-content .pane.active {
+    display: table-cell;
+}
+.cards-3 .card-2 .card-content .pane.active .row{
+    display: table-row;
+}
+
+.cards-3 input[ type = 'checkbox']{
+    margin: 7px;
+}
+.cards-3 .card-2 .card-content span {
+    padding-left: 5px;
+    color: grey;
+}
+
+.cards-3 .card-2  button { 
+    margin: 0px 10px;
+    background: white;
+    border: white
+} 
+
+footer{
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-top: 5px;
+    background: white;
+    text-align: center;
+}
+
+.navbar ,.cards-1 .card-header,.cards-1 .card-content, .cards-2 .card-header i, .cards-2 .footder-content , .cards-3 .card-1 .card-header, .cards-3 .card-1 .card-content, .cards-3 .card-2 .card-header, .cards-3 .card-2 .card-content {
+    box-shadow:
+    0 3px 5px -1px rgb(0 0 0 / 20%), 
+    0 6px 10px 0 rgb(0 0 0 / 14%), 
+    0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
