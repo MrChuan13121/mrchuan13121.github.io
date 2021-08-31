@@ -170,7 +170,7 @@
 .my-app ul hr{
     width: 256px;
     border-width: 1px;
-    opacity: 30%;
+    opacity: 25%;
 }
 .my-app ul p {
     display: none;
@@ -463,6 +463,12 @@
     transition: .3s;
     
 }
+.cards-3 .card-2 .card-header .click.active {
+    border-bottom: 3px solid white;
+    background: rgba(255, 255, 255, 0.205);
+    opacity: 100%;
+    
+}
 .cards-3 .card-2 .card-header .click:hover{
     border-bottom: 3px solid white;
     background: rgba(255, 255, 255, 0.205);
@@ -480,6 +486,7 @@
 }
 
 .cards-3 .card-2 .card-content {
+    
     background: white;
     margin-top: -40px;
     border-radius: 10px;
@@ -510,7 +517,27 @@
     background: white;
     border: white
 } 
+.cards-3 .repuest{
+    display: flex;
+}
+.cards-3 textarea{
+    resize: none;
+    outline: none;
+    border: white;
+    font-size: 15px;
 
+
+}
+.cards-3 .repuest button{
+
+    border-radius: 4px;
+    background: #ccc;
+    margin: 30px 10px;
+    transition: all .03s;
+}
+.cards-3 .repuest button:active{
+    background: rgb(95, 95, 95);
+}
 footer{
     margin-top: 40px;
     padding-left: 30px;
